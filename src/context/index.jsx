@@ -1,9 +1,20 @@
-import React, { createContext } from 'react';
+import React, { useState, useMemo } from 'react';
 
-export const Context = createContext(0);
+export const MyContext = React.createContext();
 
-function Provider({ children }) {
-  return <Context.Provider>{children}</Context.Provider>;
-};
+function Provider(props) {
+  const [userInformations, setUserInformations] = useState('');
+
+  const contextValue = useMemo(() => ({
+    userInformations,
+    setUserInformations
+  }), [userInformations]);
+
+  return (
+    <MyContext.Provider value={contextValue}>
+      {props.children}
+    </MyContext.Provider>
+  );
+}
 
 export default Provider;
