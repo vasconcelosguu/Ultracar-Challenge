@@ -12,10 +12,69 @@ module.exports = {
       password: 'jessicapassword',
       id: jessicaId,
       carModel: 'Peugeot',
-      part: {
-        name: 'Kit Suspensão',
-        price: 'R$ 1.399'
-      }
+      parts: [
+         {
+          name: 'Kit Suspensão',
+          price: 1.399
+        },
+         {
+          name: 'Faróis',
+          price: 557.52
+        }
+      ],
+    },
+    {
+      name: 'Rafael',
+      lastName: 'Oliveira',
+      email: 'rafael@gmail.com',
+      password: 'rafaelpassword',
+      id: rafaelId,
+      carModel: 'Volkswagen Fox',
+      parts: [{
+          name: 'Correia dentada',
+          price: 628.11
+        },
+        {
+          name: 'Pneus',
+          price: 460.90
+        }
+      ]
+    },
+    {
+      name: 'Francisco',
+      lastName: 'Gonçalves',
+      email: 'francisco@gmail.com',
+      password: 'franciscopassword',
+      id: franciscoId,
+      carModel: 'Hyundai HB20',
+      parts: [
+        {
+          name: 'Amortecedor',
+          price: 645.67
+        },
+         {
+          name: 'Parabrisa',
+          price:  667.11
+        }
+      ]
+    },
+    {
+      name: 'Yago',
+      lastName: 'Henrique',
+      email: 'yago@gmail.com',
+      password: 'yagopassword',
+      id: yagoId,
+      carModel: 'Nissan GT-R',
+      parts: [
+        {
+          name: 'Pistão',
+          price: 1.442
+        },
+        {
+          name: 'Radiador',
+          price: 777.99,
+        }
+      ]
     }
   ]
 }
