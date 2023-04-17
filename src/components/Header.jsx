@@ -2,10 +2,18 @@ import { useContext } from "react"
 import { MyContext } from "../context"
 import { BiLogOut } from "react-icons/bi";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 export default function Header() {
 
-  const { userInformations } = useContext(MyContext)
+  const { userInformations, setUserInformations } = useContext(MyContext);
+  let navigate = useNavigate();
+
+  const logoutFunc = () => {
+    setUserInformations('');
+    navigate('/login')
+  };
 
   return(
     <nav class="flex items-center justify-between flex-wrap bg-gray-800 p-6 fixed w-full z-10 top-0">
@@ -28,7 +36,7 @@ export default function Header() {
 					<Link class="inline-block text-gray-200 no-underline hover:text-gray-400 hover:text-underline py-2 px-4" href="#">Serviços</Link>
 				</li>
 				<li class="mr-3">
-					<button class="inline-block text-gray-200 no-underline hover:text-gray-200 hover:text-underline py-2 px-4">Logout<BiLogOut /></button>
+					<button onClick={logoutFunc} class="inline-block text-gray-200 no-underline hover:text-gray-200 hover:text-underline py-2 px-4">Logout<BiLogOut /></button>
 				</li>
 			</ul>
 		</div>
