@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import QRCodeGenerate from "../components/QrCode";
 
 export default function HomePage() {
-  const { userInformations } = useContext(MyContext);
+  const { userInformations, isInWork } = useContext(MyContext);
   return(
     <>
     <Header />
@@ -26,7 +26,7 @@ export default function HomePage() {
                         laudantium quia tempore delect
                     </p>
 
-                    <Link to="/services" className="inline-block mt-2 text-blue-500 underline hover:text-blue-400"><button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Ver Reparos</button></Link>
+                    <Link to="/services" className="inline-block mt-2 text-blue-500 underline hover:text-blue-400"><button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">{!isInWork ? 'Ver Reparos': 'Status de reparo'}</button></Link>
 
                     <div className="flex items-center mt-6">
                         <TbUser className="object-cover object-center w-10 h-10 rounded-full" />
