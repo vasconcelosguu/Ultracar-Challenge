@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { MyContext } from "../context"
 import Header from "../components/Header";
+import { TbUser } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import QRCodeGenerate from "../components/QrCode";
 
@@ -8,31 +9,38 @@ export default function HomePage() {
   const { userInformations } = useContext(MyContext);
   return(
     <>
-      <Header />
-      <div className="min-h-screen bg-gray-100 flex flex-col justify-center">
-   <div className="relative m-3 flex flex-wrap mx-auto justify-center">
-      <div className="min-w-[340px]flex flex-col group">
-         <div
-            className="h-48 md:h-56 lg:h-[24rem] w-full bg-red-500 border-2 border-white flex items-center justify-center text-white text-base mb-3 md:mb-5 overflow-hidden relative rounded-xl">
-            <img src={` ../images/${userInformations.carModel}.jpg`}
-            className="object-cover w-full h-full scale-100 group-hover:scale-110 transition-all duration-400"
-            alt=""/>
-            <div
-               className="absolute z-10 border-4 border-primary w-[95%] h-[95%] invisible group-hover:visible opacity-0 group-hover:opacity-100 group-hover:scale-90 transition-all duration-500">
+    <Header />
+    <main className="bg-white dark:bg-gray-900">
+        <div className="container px-6 py-10 mx-auto">
+            <h1 className="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">From the blog</h1>
+            <div className="mt-8 lg:-mx-6 lg:flex lg:items-center">
+                <img className="object-cover w-full lg:mx-6 lg:w-1/2 rounded-xl h-72 lg:h-96" src={` ../images/${userInformations.carModel}.jpg`} alt=""/>
+
+                <div className="mt-6 lg:w-1/2 lg:mt-0 lg:mx-6 ">
+                    <p className="block mt-4 text-2xl font-semibold text-gray-800 hover:underline dark:text-white md:text-3xl">
+                    { userInformations.carModel }
+                    </p>
+
+                    <p className="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veritatis sint autem nesciunt,
+                        laudantium quia tempore delect
+                    </p>
+
+                    <Link to="/services" className="inline-block mt-2 text-blue-500 underline hover:text-blue-400"><button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Ver Reparos</button></Link>
+
+                    <div className="flex items-center mt-6">
+                        <TbUser className="object-cover object-center w-10 h-10 rounded-full" />
+
+                        <div className="mx-4">
+                            <h1 className="text-sm text-gray-700 dark:text-gray-200">{userInformations.name}</h1>
+                            <p className="text-sm text-gray-500 dark:text-gray-400">Responsavel</p>
+                        </div>
+                    </div>
+                </div>
+                <QRCodeGenerate/>
             </div>
-         </div>
-         <a href="./single_post.html"
-            className=" block text-black text-center hover:text-primary transition-colors duration-150 text-lg md:text-xl mb-1">
-         { userInformations.carModel }</a>
-         <div className="flex justify-center gap-x-3">
-            <Link to='/services'
-               className=" px-5 py-2 border border-primary text-primary hover:bg-primary  transition-all outline-none bg-black border-black text-white hover:text-black hover:bg-white font-bold rounded-lg">
-            Ver Reparos</Link>
-         </div>
-         <QRCodeGenerate />
-      </div>
-   </div>
-</div>
+        </div>
+    </main>
     </>
   )
 }

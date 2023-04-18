@@ -5,48 +5,36 @@ import { MyContext } from "../context";
 export default function Product() {
   const { userInformations } = useContext(MyContext)
   return(
-<div class="flex flex-col mt-16">
-  <div class="overflow-x-auto sm:mx-0.5 lg:mx-0.5">
-    <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
-      <div class="overflow-hidden">
-        <table class="min-w-full">
-          <thead class="bg-white border-b">
+        <table class="min-w-full text-center">
+          <thead class="border-b">
             <tr>
-              <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                #
+              <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4">
+                Class
               </th>
-              <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                First
+              <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4">
+                Heading
               </th>
-              <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                Last
-              </th>
-              <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                Handle
+              <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4">
+                Heading
               </th>
             </tr>
           </thead>
-            {userInformations.parts.map((products, i) => (
-              <tbody>
-            <tr class="bg-gray-100 border-b">
-              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{i + 1}</td>
-              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+          <tbody>
+            {userInformations.parts.map((products) => (
+              <tr class="border-b bg-gray-800 boder-gray-900">
+              <td class="text-sm text-white font-medium px-6 py-4 whitespace-nowrap">
                 {products.name}
               </td>
-              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+              <td class="text-sm text-white font-light px-6 py-4 whitespace-nowrap">
                 {products.desc}
               </td>
-              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+              <td class="text-sm text-white font-light px-6 py-4 whitespace-nowrap">
                 {`R$ ${products.price}`}
               </td>
             </tr>
-              </tbody>
             ))}
+          </tbody>
         </table>
-      </div>
-    </div>
-  </div>
-</div>
   )
 }
 
