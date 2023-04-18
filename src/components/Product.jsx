@@ -5,7 +5,7 @@ import { MyContext } from "../context";
 export default function Product() {
   const { userInformations } = useContext(MyContext)
   return(
-        <table class="min-w-full text-center">
+        <table class="min-w-full mt-10 text-center">
           <thead class="border-b">
             <tr>
               <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4">
