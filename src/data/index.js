@@ -15,30 +15,43 @@ module.exports = {
       parts: [
          {
           name: 'Kit Suspensão',
-          price: 1.399
+          desc: 'Durabilidade e qualidade segue padrões originais',
+          price: 1399.00
         },
          {
           name: 'Faróis',
+          desc: 'Durabilidade e qualidade segue padrões originais',
           price: 557.52
         }
       ],
+      employe: [{
+        name: 'Trevor',
+        age: 40
+      }]
     },
     {
       name: 'Rafael',
-      lastName: 'Oliveira',
+      lastName: 'França',
       email: 'rafael@gmail.com',
       password: 'rafaelpassword',
       id: rafaelId,
       carModel: 'Volkswagen Fox',
-      parts: [{
+      parts: [
+        {
           name: 'Correia dentada',
+          desc: 'Durabilidade e qualidade segue padrões originais',
           price: 628.11
         },
         {
           name: 'Pneus',
+          desc: 'Durabilidade e qualidade segue padrões originais',
           price: 460.90
         }
-      ]
+      ],
+      employe: [{
+        name: 'Pedro',
+        age: 36
+      }]
     },
     {
       name: 'Francisco',
@@ -50,13 +63,16 @@ module.exports = {
       parts: [
         {
           name: 'Amortecedor',
+          desc: 'Durabilidade e qualidade segue padrões originais',
           price: 645.67
         },
          {
           name: 'Parabrisa',
+          desc: 'Durabilidade e qualidade segue padrões originais',
           price:  667.11
         }
-      ]
+      ],
+      employeName: 'Thauan',
     },
     {
       name: 'Yago',
@@ -68,13 +84,16 @@ module.exports = {
       parts: [
         {
           name: 'Pistão',
-          price: 1.442
+          desc: 'Durabilidade e qualidade segue padrões originais',
+          price: 1442.99
         },
         {
           name: 'Radiador',
+          desc: 'Durabilidade e qualidade segue padrões originais',
           price: 777.99,
         }
-      ]
+      ],
+      employeName: 'João Pedro',
     }
   ]
 }
