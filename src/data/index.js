@@ -24,10 +24,7 @@ module.exports = {
           price: 557.52
         }
       ],
-      employe: [{
-        name: 'Trevor',
-        age: 40
-      }]
+      employeName: 'Trevor',
     },
     {
       name: 'Rafael',
@@ -48,10 +45,7 @@ module.exports = {
           price: 460.90
         }
       ],
-      employe: [{
-        name: 'Pedro',
-        age: 36
-      }]
+      employeName: 'Pedro',
     },
     {
       name: 'Francisco',
