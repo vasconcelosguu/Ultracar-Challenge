@@ -34,7 +34,7 @@ export default function Header() {
 			<ul class="list-reset lg:flex justify-end flex-1 items-center">
 				<li class="mr-3">
 					<Link class="inline-block text-gray-200 no-underline hover:text-gray-400 hover:text-underline py-2 px-4" to='/homepage'>Home</Link>
-					<Link class="inline-block text-gray-200 no-underline hover:text-gray-400 hover:text-underline py-2 px-4" to="/services">Serviços</Link>
+					<Link class="inline-block text-gray-200 no-underline hover:text-gray-400 hover:text-underline py-2 px-4" to='/services'>Serviços</Link>
 				</li>
 				<li class="mr-3">
 					<button onClick={logoutFunc} class="inline-block text-gray-200 no-underline hover:text-gray-200 hover:text-underline py-2 px-4">Logout<BiLogOut /></button>
